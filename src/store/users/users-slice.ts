@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { rus } from "../../assets/regionsData";
+import { usa } from "../../assets/regionsData";
 import { RegionType } from "../../models/regions";
 
 type usersType = {
@@ -9,7 +9,7 @@ type usersType = {
 }
 
 const initialState: usersType = {
-  users: rus,
+  users: usa,
   isLoading: false,
   error: "",
 };

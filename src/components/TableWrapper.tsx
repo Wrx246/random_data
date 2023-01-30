@@ -1,7 +1,9 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
+import { useAppSelector } from '../hooks/redux'
 
 const TableWrapper = () => {
+  const { users } = useAppSelector(state => state.usersSlice)
   return (
     <Table striped bordered hover size="sm">
       <thead>
@@ -14,13 +16,15 @@ const TableWrapper = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>19849281428</td>
-          <td>Иванов Иван Иванович</td>
-          <td>г.Москва, ул.Ивановская, д.10, кв.45</td>
-          <td>+74232497777</td>
-        </tr>
+          {users?.map(u => (
+            <tr key={u.id}>
+              <td>{u.number}</td>
+              <td>{u.id}</td>
+              <td>{u.fullName}</td>
+              <td>{u.address}</td>
+              <td>{u.phone}</td>
+            </tr>
+          ))}
       </tbody>
     </Table>
   )
