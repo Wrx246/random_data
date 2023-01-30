@@ -1,10 +1,13 @@
 import './App.css';
+import Header from './components/Header';
+import TableWrapper from './components/TableWrapper';
 
 function App() {
   return (
-    <>
-    work
-    </>
+    <main className='app'>
+      <Header />
+      <TableWrapper />
+    </main>
   );
 }
 
