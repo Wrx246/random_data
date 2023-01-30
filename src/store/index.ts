@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import russiaSlice  from './users/russia-slice';
+import usersSlice  from './users/users-slice';
 
 
 const rootReducer = combineReducers({
-  russiaSlice,
+  usersSlice
 })
 
 export const setupStore = () => {

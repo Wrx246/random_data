@@ -1,31 +1,30 @@
-import { RegionType } from "../models/regions";
 
-export const rus: RegionType[] = [
+export const rus = [
   {
-    number: null,
-    id: null,
+    number: 1,
+    id: 9123,
     fullName: "Иванов Иван Иванович",
     address: "г.Москва, ул.Ивановская, д.10, кв.45",
-    phone: "+7",
+    phone: "+74232497777",
   },
 ];
 
-export const usa: RegionType[] = [
+export const usa = [
   {
-    number: null,
-    id: null,
+    number: 1,
+    id: 2345,
     fullName: "Jhon Smith",
     address: "775 Westminster Avenue, Brooklyn, NY 11230",
-    phone: "+1",
+    phone: "+13022461037",
   },
 ];
 
-export const pol: RegionType[] = [
+export const pol = [
   {
-    number: null,
-    id: null,
+    number: 1,
+    id: 4564,
     fullName: "Nowak Kowalski",
     address: "05-500 Piaseczno Ul. Postepu 101",
-    phone: "+48",
+    phone: "+48(539) 234-435",
   },
 ];

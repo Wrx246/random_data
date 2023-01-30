@@ -1,37 +1,38 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { rus } from "../../assets/regionsData";
 import { RegionType } from "../../models/regions";
 
-type RussiaType = {
+type usersType = {
     users: RegionType[],
     isLoading: boolean,
     error: string
 }
 
-const initialState: RussiaType = {
-  users: [],
+const initialState: usersType = {
+  users: rus,
   isLoading: false,
   error: "",
 };
 
-export const russiaSlice = createSlice({
-  name: "russia",
+export const usersSlice = createSlice({
+  name: "users",
   initialState,
   reducers: {
-    russiaFetching(state) {
+    usersFetching(state) {
       state.isLoading = true;
     },
-    russiaFetchingSuccess(state, action: PayloadAction<RegionType[]>) {
+    usersFetchingSuccess(state, action: PayloadAction<RegionType[]>) {
       state.isLoading = false;
       state.error = "";
       state.users = action.payload;
     },
-    russiaFetchingError(state, action: PayloadAction<string>) {
+    usersFetchingError(state, action: PayloadAction<string>) {
       state.isLoading = false;
       state.error = action.payload;
     },
   },
 });
 
-export default russiaSlice.reducer;
+export default usersSlice.reducer;
 
-export const russiaActions = russiaSlice.actions;
+export const usersActions = usersSlice.actions;
